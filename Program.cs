@@ -1,4 +1,11 @@
-﻿namespace CsharpPart1Exercises
+﻿using System;
+using System.Diagnostics;
+using System.Reflection.Metadata;
+using System.Runtime.Intrinsics.X86;
+using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
+namespace CsharpPart1Exercises
 {
     internal class Program
     {
@@ -272,6 +279,191 @@
             //else
             //{
             //    Console.WriteLine("\n You enter unaccepted operator!");
+            //}
+
+            //---------------------------------------------------------------------------------------
+
+            ////1.Simple Calculator(Switch - Case)
+            ////• Ask the user for two numbers and an operator (+, -, *, /).
+            ////• Use switch-case to perform the selected operation.
+
+            //double num1, num2, op;
+            //double result = 0;
+            //bool flag = false;
+            //Console.WriteLine("\n Enter your operation:" +
+            //    "\n 1. Addition \n 2. Subtraction \n 3. Multiplication \n 4. Division");
+            //op = double.Parse(Console.ReadLine());
+
+            //Console.WriteLine("Enter your first number:");
+            //num1= double.Parse(Console.ReadLine());
+            //Console.WriteLine("Enter your second number:");
+            //num2 = double.Parse(Console.ReadLine());
+
+            //switch (op)
+            //{
+            //    case 1:
+            //        result = num1 + num2;
+            //        break;
+
+            //    case 2:
+            //        result = num1 - num2;
+            //        break;
+
+            //    case 3:
+            //        result = num1 * num2;
+            //        break;
+            //    case 4:
+            //        if (num2 == 0)
+            //        {
+            //            Console.WriteLine("You can not divide by ZERO!");
+            //            flag = true;
+            //        }
+            //        else
+            //        {
+            //            result = num1 / num2;
+            //        }
+            //        break;
+            //    default:
+            //        Console.WriteLine("\n You enter unaccepted operator!");
+            //        flag = true;
+            //        break;
+
+            //}
+
+            //if (!flag)
+            //{
+            //    Console.WriteLine("Your result is: " + result);
+            //}
+
+            //------------------------------------------------------------------------------------
+
+            ////2.Basic ATM System 
+            ////• Use a starting balance of $1000.
+            ////• Allow users to Deposit, Withdraw, or Check Balance.  
+            ////• Withdraw should check if funds are available. 
+            ////• Display a menu with options:
+            ////   o 1.Withdraw Money
+            ////   o 2.Deposit Money
+            ////   o 3.Check Balance
+            ////   o 4.Exit
+            ////• Use switch-case to process the selected operation.
+
+            //double balance = 1000;
+            //double user_Emoney, available;
+            //int options;
+            //Console.WriteLine("Select Options: \n 1.Withdraw Money \n 2.Deposit Money \n 3.Check Balance \n 4.Exit");
+            //options = int.Parse(Console.ReadLine());
+
+            //switch (options)
+            //{
+            //    case 1:
+            //        Console.WriteLine("Enter the amount you want to Withdraw:");
+            //        user_Emoney = double.Parse(Console.ReadLine());
+            //        available = balance - user_Emoney;
+            //        if(available <= 0)
+            //        {
+            //            Console.WriteLine("Sorry, but you do not have this amount of money");
+            //        }
+            //        else
+            //        {
+            //            balance = balance - user_Emoney;
+            //            Console.WriteLine("The money has been successfully withdeawn from your account" +
+            //                              "\n Your remaining balance is: " + balance);
+            //        }
+            //        break;
+            //    case 2:
+            //        Console.WriteLine("Enter the amount you want to deposit:");
+            //        user_Emoney = double.Parse(Console.ReadLine());
+            //        balance = balance + user_Emoney;
+            //        Console.WriteLine("The money has been successfully deposit to your account" +
+            //                              "\n Your new balance is: " + balance);
+            //        break;
+            //    case 3:
+            //        Console.WriteLine("Your balance is: " + balance);
+            //        break;
+            //    case 4:
+            //        Console.WriteLine("Until we meet again ... Have a nice day!");
+            //        break;
+            //    default:
+            //        Console.WriteLine("Wrong Choice!");
+            //        break;
+            //}
+
+            //-------------------------------------------------------------------------------------
+
+            ////3.Geometry Calculator
+            ////• Ask the user to choose a shape:
+            ////   o 1.Circle(Calculate Area & Circumference)
+            ////   o 2.Square(Calculate Area & Perimeter)
+            ////   o 3.Triangle(Calculate Area)
+            ////• Use switch-case to perform the corresponding calculation.
+
+            //int shap;
+            //double length, width, radius, Area, perimeter, Circumference;
+            //double p = 3.14;
+            //Console.WriteLine("Select a shape: \n 1.Circle(Calculate Area & Circumference)" +
+            //                  " \n 2.Square(Calculate Area & Perimeter)" +
+            //                  " \n 3.Triangle(Calculate Area)");
+            //shap = int.Parse(Console.ReadLine());
+
+            //switch (shap)
+            //{
+            //    case 1:
+            //        Console.WriteLine("Enter your circle radius: ");
+            //        radius = double.Parse(Console.ReadLine());
+            //        Area = p * (radius * radius);
+            //        Circumference = 2 * p * radius;
+            //        Console.WriteLine("Your circle area is: " + Area +
+            //                          "\nYour circle Circumference is: " + Circumference);
+            //        break;
+            //    case 2:
+            //        Console.WriteLine("Enter your square side length: ");
+            //        length = double.Parse(Console.ReadLine());
+            //        Area = length * length;
+            //        perimeter = 4 * length;
+            //        Console.WriteLine("Your square area is: " + Area +
+            //                          "\n Your square perimeter is: " + perimeter);
+            //        break;
+            //    case 3:
+            //        Console.WriteLine("Enter your triangle length: ");
+            //        length = double.Parse(Console.ReadLine());
+            //        Console.WriteLine("Enter your triangle width: ");
+            //        width = double.Parse(Console.ReadLine());
+            //        Area = length * width;
+            //        Console.WriteLine("Your triangle area is: " + Area);
+            //        break;
+            //    default:
+            //        Console.WriteLine("Wrong Choice!");
+            //        break;
+            //}
+
+            //---------------------------------------------------------------------------
+
+            ////4.Factorial of a Number
+            ////• Ask the user for a number N and calculate its factorial(N!).
+
+            //int N;
+            //int y = 2;
+            //int result = 1;
+            //Console.WriteLine("Enter your number: ");
+            //N = int.Parse(Console.ReadLine());
+
+            //if (N == 1 || N == 0)
+            //{
+            //    Console.WriteLine("Your factorial of " + N + " is: " + result);
+            //}
+            //else if(N < 0)
+            //{
+            //    Console.WriteLine("Wrong input!");
+            //}
+            //else
+            //{
+            //    for (int i = 1; i < N; i++)
+            //    {
+            //        result = result * y;
+            //        y++;
+            //    }
+            //    Console.WriteLine("Your factorial of " + N + " is: " + result);
             //}
 
         }
