@@ -496,6 +496,56 @@ namespace CsharpPart1Exercises
             //Console.WriteLine("The sum of all even numbers in your number is: " + sum_even +
             //                  "\nThe sum of all odd numbers in your number is: " + sum_odd);
 
+            //----------------------------------------------------------------------------
+
+            ////6.Scientific Calculator(Switch - Case & Math Functions)
+            ////• Ask for an operation (sin, cos, tan, sqrt, log, pow). 
+            ////• Use switch-case to compute results using Math functions. 
+            //char choice;
+            //do
+            //{
+            //    Console.Clear();
+            //    double operation, number, power;
+            //    Console.WriteLine("Enter your number: ");
+            //    number = double.Parse(Console.ReadLine());
+            //    Console.WriteLine("Select operation: \n1. sin \n2. cos \n3. tan \n4. sqrt \n5. log \n6. pow");
+            //    operation = double.Parse(Console.ReadLine());
+
+            //    switch (operation)
+            //    {
+            //        case 1:
+            //            Console.WriteLine(Math.Sin(number));
+            //            break;
+            //        case 2:
+            //            Console.WriteLine(Math.Cos(number));
+            //            break;
+            //        case 3:
+            //            Console.WriteLine(Math.Tan(number));
+            //            break;
+            //        case 4:
+            //            Console.WriteLine(Math.Sqrt(number));
+            //            break;
+            //        case 5:
+            //            Console.WriteLine(Math.Log(number));
+            //            break;
+            //        case 6:
+            //            Console.WriteLine("Enter your power: ");
+            //            power = double.Parse(Console.ReadLine());
+            //            Console.WriteLine(Math.Pow(number, power));
+            //            break;
+            //        default:
+            //            Console.WriteLine("Wrong input!");
+            //            break;
+            //    }
+
+            //    Console.WriteLine("Do you want another operation ? y / n");
+            //    choice = Console.ReadKey().KeyChar;
+
+            //} while (choice == 'y' || choice == 'Y');
+
+            //Console.WriteLine("Have a nice day!");
+
+
 
         }
     }
