@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Diagnostics.Metrics;
+using System.Numerics;
 using System.Reflection.Metadata;
 using System.Runtime.Intrinsics.X86;
 using System.Threading.Tasks;
@@ -465,6 +467,35 @@ namespace CsharpPart1Exercises
             //    }
             //    Console.WriteLine("Your factorial of " + N + " is: " + result);
             //}
+
+            //------------------------------------------------------------------------
+
+            ////5.Sum of Even and Odd Numbers
+            ////• Ask the user to enter N. 
+            ////• Find the sum of all even and odd numbers from 1 to N . 
+
+            //int N, check;
+            //int sum_even = 0;
+            //int sum_odd = 0;
+            //Console.WriteLine("Enter your number: ");
+            //N = int.Parse(Console.ReadLine());
+
+            //for (int i = 1; i <= N; i++)
+            //{
+            //    check = i % 2;
+            //    if(check == 0)
+            //    {
+            //        sum_even = sum_even + i;
+            //    }
+            //    else
+            //    {
+            //        sum_odd = sum_odd + i;
+            //    }
+            //}
+
+            //Console.WriteLine("The sum of all even numbers in your number is: " + sum_even +
+            //                  "\nThe sum of all odd numbers in your number is: " + sum_odd);
+
 
         }
     }
