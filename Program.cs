@@ -634,7 +634,36 @@ namespace CsharpPart1Exercises
             //{
             //    Console.WriteLine(output);
             //    output = output + "*";
-                
+
+            //}
+
+            //-----------------------------------------------------------------------
+
+            ////8.Print a Pyramid Pattern(For Loop)
+            ////• Ask the user for N and print a pyramid
+            ////Example: (for N = 4)
+            ////        *
+            ////       ***
+            ////      *****
+            ////     *******
+
+            //int N;
+            //string output = "*";
+            //string space = " ";
+            //Console.WriteLine("Enter number:");
+            //N = int.Parse(Console.ReadLine());
+            //for (int i = 1; i <= N; i++)
+            //{
+            //    space += " ";
+  
+
+            //}
+            //for (int r = N; r > 1; r--)
+            //{
+            //    space = space.Remove(space.Length - 1);
+            //    Console.WriteLine(space + output);
+            //    output = output + "**";
+
             //}
 
 
