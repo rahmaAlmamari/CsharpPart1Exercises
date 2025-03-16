@@ -608,12 +608,34 @@ namespace CsharpPart1Exercises
 
             //    } while (g_number != num);
 
-                
+
             //    Console.WriteLine("Do you want another operation ? y / n");
             //    choice = Console.ReadKey().KeyChar;
 
             //} while (choice == 'y' || choice == 'Y');
             //Console.WriteLine("Have a nice day!");
+
+            //---------------------------------------------------------------------------
+
+            ////7.Print Pattern(For Loop)
+            ////• Ask the user for a number N and print a right - angled triangle
+            ////Example: (for N = 5)
+            ////        *
+            ////        **
+            ////        ***
+            ////        ****
+            ////        *****
+
+            //int N;
+            //string output = "*";
+            //Console.WriteLine("Enter number:");
+            //N = int.Parse(Console.ReadLine());
+            //for (int i = 1; i <= N; i++)
+            //{
+            //    Console.WriteLine(output);
+            //    output = output + "*";
+                
+            //}
 
 
 
