@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Diagnostics.Metrics;
+using System.Linq;
 using System.Numerics;
 using System.Reflection.Metadata;
 using System.Runtime.Intrinsics.X86;
@@ -655,7 +656,7 @@ namespace CsharpPart1Exercises
             //for (int i = 1; i <= N; i++)
             //{
             //    space += " ";
-  
+
 
             //}
             //for (int r = N; r > 1; r--)
@@ -666,7 +667,46 @@ namespace CsharpPart1Exercises
 
             //}
 
+            //--------------------------------------------------------------------------
 
+            ////9.Print a Diamond Pattern(For Loop)
+            ////• Ask for N, then print a diamond shape.
+            ////Example: (for N = 3 )
+            ////        *
+            ////       ***
+            ////      *****
+            ////       ***
+            ////        *
+
+
+            //int N;
+            //string output = "*";
+            //string space = " ";
+            //Console.WriteLine("Enter number:");
+            //N = int.Parse(Console.ReadLine());
+            //for (int i = 1; i <= N; i++)
+            //{
+            //    space += " ";
+
+
+            //}
+            //for (int r = N; r > 1; r--)
+            //{
+            //    space = space.Remove(space.Length - 1);
+            //    Console.WriteLine(space + output);
+            //    output = output + "**";
+
+            //}
+            //space = space.Remove(space.Length - 1);
+            //for (int r = N; r > 1; r--)
+            //{
+                
+            //    Console.WriteLine(space + output);
+            //    output = output.Remove(output.Length - 2);
+            //    space = space.Insert(1, " ");
+
+            //}
+            //Console.WriteLine(space + output);
 
         }
     }
