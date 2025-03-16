@@ -572,6 +572,49 @@ namespace CsharpPart1Exercises
 
             //Console.WriteLine("Have a nice day!");
 
+            //------------------------------------------------------------------------------------
+
+            ////10.Guess Game with helper
+            ////Generate a random number(1 - 100) and ask the user to guess the number.  
+            ////• If guess is too high → "Try Lower!"
+            ////• If guess is too low → "Try Higher!"
+            ////• If guess is correct → "You Win!"
+            ////Use a while loop to keep asking:
+            //char choice;
+            //do
+            //{
+            //    int g_number;
+            //    //to generate a random number ...
+            //    Random rnd = new Random();
+            //    int num = rnd.Next(100);
+            //   // Console.WriteLine(num);
+            //    do
+            //    {
+            //        Console.WriteLine("Guess my number: ");
+            //        g_number = int.Parse(Console.ReadLine());
+
+            //        if (g_number < num)
+            //        {
+            //            Console.WriteLine("Try Higher! ... ");
+            //        }
+            //        else if(g_number > num)
+            //        {
+            //            Console.WriteLine("Try Lower! ... ");
+            //        }
+            //        else
+            //        {
+            //            Console.WriteLine("You Win! ... ");
+            //        }
+
+            //    } while (g_number != num);
+
+                
+            //    Console.WriteLine("Do you want another operation ? y / n");
+            //    choice = Console.ReadKey().KeyChar;
+
+            //} while (choice == 'y' || choice == 'Y');
+            //Console.WriteLine("Have a nice day!");
+
 
 
         }
