@@ -777,8 +777,62 @@ namespace CsharpPart1Exercises
             //    Console.WriteLine();
             //}
 
+            //-------------------- soluation 3: using nested loop (6 loop) ... easy one
+            //int N;
+            //Console.WriteLine("Enter number:");
+            //N = int.Parse(Console.ReadLine());
 
+            //for (int i = 1; i <= N; i++) // to go to the next line in the upper part
+            //{
+            //    //for (int j = N - i; j >= 1; j--) // to print space
+            //    //{
+            //    //    Console.Write(" ");
+            //    //}
 
+            //    //for (int r = 1; r <= (i * 2 - 1); r++) // to print start "*"
+            //    //{
+            //    //    Console.Write("*");
+            //    //}
+
+            //    //Console.WriteLine(); // go to next line 'row' .....
+
+            //    //calling PrintSpaceStart function ...
+            //    PrintSpaceStart(N, i);
+            //}
+
+            //for (int i = N-1; i >= 1; i--) // to go to the next line in the lower part
+            //{
+            //    //for (int j = N - i; j >= 1; j--) // to print space
+            //    //{
+            //    //    Console.Write(" ");
+            //    //}
+
+            //    //for (int r = 1; r <= (i * 2 - 1); r++) // to print start "*"
+            //    //{
+            //    //    Console.Write("*");
+            //    //}
+
+            //    //Console.WriteLine(); // go to next line 'row' .....
+
+            //    //calling PrintSpaceStart function ...
+            //    PrintSpaceStart(N, i);
+            //}
+
+        }
+
+        static void PrintSpaceStart(int N, int i)
+        {
+            for (int j = N - i; j >= 1; j--) // to print space
+            {
+                Console.Write(" ");
+            }
+
+            for (int r = 1; r <= (i * 2 - 1); r++) // to print start "*"
+            {
+                Console.Write("*");
+            }
+
+            Console.WriteLine(); // go to next line 'row' .....
         }
     }
 }
