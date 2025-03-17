@@ -700,13 +700,65 @@ namespace CsharpPart1Exercises
             //space = space.Remove(space.Length - 1);
             //for (int r = N; r > 1; r--)
             //{
-                
+
             //    Console.WriteLine(space + output);
             //    output = output.Remove(output.Length - 2);
             //    space = space.Insert(1, " ");
 
             //}
             //Console.WriteLine(space + output);
+
+            //-------------------- soluation 2:
+            //int N;
+            //Console.WriteLine("Enter number:");
+            //N = int.Parse(Console.ReadLine());
+
+            //for (int i = 1; i <= N; i++) // to go to the next line in the upper part
+            //{
+            //    for (int j = N - i; j >= 1; j--) // to print space
+            //    {
+            //        Console.Write(" ");
+            //    }
+
+            //    for (int r = 1; r <= (i*2 - 1); r++) // to print start "*"
+            //    {
+            //        Console.Write("*");
+            //    }  
+
+            //    Console.WriteLine(); // go to next line 'row' .....
+            //}
+
+            //for (int i = 1; i <= N - 1; i++)// to go to the next line in the lower part
+            //{
+            //    for (int j = i; j <= (i * 2 - 1); j++) // to print space
+            //    {
+            //        Console.Write(" ");
+            //    }
+
+            //    for (int r = (N*2 - 3); r >= (i * 2 - 1); r--) // to print start "*"
+            //    {
+            //        Console.Write("*");
+            //    }
+            //    Console.WriteLine();
+            //}
+
+
+
+
+            //---------------------------- soluation 3:
+            //int N;
+            //Console.WriteLine("Enter number:");
+            //N = int.Parse(Console.ReadLine());
+            //int row = N + (N - 1);
+            //for (int i = 1; i <= row; i++) //to go to the next line ...
+            //{
+            //    for(int j = N - 1; J)
+            //    {
+            //    }
+            //    Console.WriteLine();
+            //}
+
+
 
         }
     }
