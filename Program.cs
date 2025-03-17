@@ -12,8 +12,13 @@ namespace CsharpPart1Exercises
 {
     internal class Program
     {
+        //main method ..
         static void Main(string[] args)
         {
+
+            //C# Part1 Exercises 
+
+
             ///*
             // 1. Even or Odd 
             // Ask the user to enter a number and check whether it is even or odd using an if-else statement.
@@ -285,7 +290,16 @@ namespace CsharpPart1Exercises
             //}
 
             //---------------------------------------------------------------------------------------
+
+
+
+
             //C# Part2 Exercises 
+
+
+
+
+
             ////1.Simple Calculator(Switch - Case)
             ////• Ask the user for two numbers and an operator (+, -, *, /).
             ////• Use switch-case to perform the selected operation.
@@ -582,13 +596,14 @@ namespace CsharpPart1Exercises
             ////• If guess is correct → "You Win!"
             ////Use a while loop to keep asking:
             //char choice;
+            //int count = 0;
             //do
             //{
             //    int g_number;
             //    //to generate a random number ...
             //    Random rnd = new Random();
             //    int num = rnd.Next(100);
-            //   // Console.WriteLine(num);
+            //    // Console.WriteLine(num);
             //    do
             //    {
             //        Console.WriteLine("Guess my number: ");
@@ -598,14 +613,16 @@ namespace CsharpPart1Exercises
             //        {
             //            Console.WriteLine("Try Higher! ... ");
             //        }
-            //        else if(g_number > num)
+            //        else if (g_number > num)
             //        {
             //            Console.WriteLine("Try Lower! ... ");
             //        }
             //        else
             //        {
-            //            Console.WriteLine("You Win! ... ");
+            //            Console.WriteLine("You Win! ... in the " + (count + 1) + "try ...");
             //        }
+
+            //        count = count + 1;
 
             //    } while (g_number != num);
 
@@ -637,6 +654,18 @@ namespace CsharpPart1Exercises
             //    output = output + "*";
 
             //}
+            //-------------------- soluation 2: using nested loop (2 loop)
+            //int N; // Number of rows
+            //Console.WriteLine("Enter number:");
+            //N = int.Parse(Console.ReadLine());
+            //for (int i = 1; i <= N; i++) // Controls rows
+            //{
+            //    for (int j = 1; j <= i; j++) // Controls columns
+            //    {
+            //        Console.Write("* ");
+            //    }
+            //    Console.WriteLine(); // Move to next line
+            //}
 
             //-----------------------------------------------------------------------
 
@@ -665,6 +694,19 @@ namespace CsharpPart1Exercises
             //    Console.WriteLine(space + output);
             //    output = output + "**";
 
+            //}
+
+            //-------------------- soluation 2: using nested loop (2 loop)
+            //int N; // Number of rows
+            //Console.WriteLine("Enter number:");
+            //N = int.Parse(Console.ReadLine());
+            //for (int i = 1; i <= N; i++) // Controls rows
+            //{
+            //    for (int j = 1; j <= N - i; j++) // Prints spaces
+            //    { Console.Write(" "); }
+            //    for (int k = 1; k <= 2 * i - 1; k++) // Prints stars
+            //    { Console.Write("*"); }
+            //    Console.WriteLine(); // Move to the next line
             //}
 
             //--------------------------------------------------------------------------
@@ -818,8 +860,49 @@ namespace CsharpPart1Exercises
             //    PrintSpaceStart(N, i);
             //}
 
-        }
 
+            while (true) // we use while loop to repeat the process and we set true so it will not stop ... 
+            {
+                Console.Clear();
+                Console.WriteLine("Select program: ");
+                Console.WriteLine("1. Simple Calculator");
+                Console.WriteLine("2. Basic ATM System");
+                Console.WriteLine("3. Geometry Calculator");
+                Console.WriteLine("4. Factorial of a Number");
+                Console.WriteLine("5. Sum of Even and Odd Numbers");
+                Console.WriteLine("6. Scientific Calculator");
+                Console.WriteLine("7. Print Right Angled Triangle Pattern");
+                Console.WriteLine("8. Print a Pyramid Pattern");
+                Console.WriteLine("9. Print a Diamond Pattern");
+                Console.WriteLine("10. Guess Number Game");
+                Console.WriteLine("11. Exit");
+
+                Console.Write("Enter your choice: ");
+                int choice = int.Parse(Console.ReadLine());
+
+                switch (choice)
+                {
+                    case 1: SimpleCalculator();  break;
+                    case 2: BasicATMSystem();  break;
+                    case 3: GeometryCalculator();  break;
+                    case 4: FactorialOfNumber();  break;
+                    case 5: SumEvenOdd();  break;
+                    case 6: ScientificCalculator(); break;
+                    case 7: RightAngledTrianglePattern();  break;
+                    case 8: PyramidPattern(); break;
+                    case 9: DiamondPattern(); break;
+                    case 10: GuessGame(); break;
+                    case 11: Console.WriteLine("Have a nice day ..."); return;
+                    default: Console.WriteLine("\n You enter unaccepted choice! ... try again"); break;
+                }
+                Console.ReadLine();// we add this line just to stop the program from clear 'Console.Clear();' the screen before the user see the result ...
+
+            }
+
+
+
+        }
+        //method for print space and start //
         static void PrintSpaceStart(int N, int i)
         {
             for (int j = N - i; j >= 1; j--) // to print space
@@ -834,5 +917,364 @@ namespace CsharpPart1Exercises
 
             Console.WriteLine(); // go to next line 'row' .....
         }
+        //1. Simple Calculator method ...
+        static void SimpleCalculator()
+        {
+            char choice;
+            do
+            {
+                double num1, num2, op;
+                double result = 0;
+                bool flag = false;
+                Console.WriteLine("\n Enter your operation:" +
+                    "\n 1. Addition \n 2. Subtraction \n 3. Multiplication \n 4. Division");
+                op = double.Parse(Console.ReadLine());
+
+                Console.WriteLine("Enter your first number:");
+                num1 = double.Parse(Console.ReadLine());
+                Console.WriteLine("Enter your second number:");
+                num2 = double.Parse(Console.ReadLine());
+
+                switch (op)
+                {
+                    case 1:
+                        result = num1 + num2;
+                        break;
+
+                    case 2:
+                        result = num1 - num2;
+                        break;
+
+                    case 3:
+                        result = num1 * num2;
+                        break;
+                    case 4:
+                        if (num2 == 0)
+                        {
+                            Console.WriteLine("You can not divide by ZERO!");
+                            flag = true;
+                        }
+                        else
+                        {
+                            result = num1 / num2;
+                        }
+                        break;
+                    default:
+                        Console.WriteLine("\n You enter unaccepted operator!");
+                        flag = true;
+                        break;
+
+                }
+
+                if (!flag)
+                {
+                    Console.WriteLine("Your result is: " + result);
+                }
+
+                Console.WriteLine("Do you want another operation ? y / n");
+                choice = Console.ReadKey().KeyChar;
+
+            } while (choice == 'y' || choice == 'Y');
+            Console.WriteLine("Have a nice day!");
+        }
+        //2. Basic ATM System method ...
+        static void BasicATMSystem()
+        {
+            char choice;
+            do
+            {
+                double balance = 1000;
+                double user_Emoney, available;
+                int options;
+                Console.WriteLine("Select Options: \n 1.Withdraw Money \n 2.Deposit Money \n 3.Check Balance \n 4.Exit");
+                options = int.Parse(Console.ReadLine());
+
+                switch (options)
+                {
+                    case 1:
+                        Console.WriteLine("Enter the amount you want to Withdraw:");
+                        user_Emoney = double.Parse(Console.ReadLine());
+                        available = balance - user_Emoney;
+                        if (available <= 0)
+                        {
+                            Console.WriteLine("Sorry, but you do not have this amount of money");
+                        }
+                        else
+                        {
+                            balance = balance - user_Emoney;
+                            Console.WriteLine("The money has been successfully withdeawn from your account" +
+                                              "\n Your remaining balance is: " + balance);
+                        }
+                        break;
+                    case 2:
+                        Console.WriteLine("Enter the amount you want to deposit:");
+                        user_Emoney = double.Parse(Console.ReadLine());
+                        balance = balance + user_Emoney;
+                        Console.WriteLine("The money has been successfully deposit to your account" +
+                                              "\n Your new balance is: " + balance);
+                        break;
+                    case 3:
+                        Console.WriteLine("Your balance is: " + balance);
+                        break;
+                    case 4:
+                        Console.WriteLine("Until we meet again ... Have a nice day!");
+                        break;
+                    default:
+                        Console.WriteLine("Wrong Choice!");
+                        break;
+                }
+
+                Console.WriteLine("Do you want another operation ? y / n");
+                choice = Console.ReadKey().KeyChar;
+
+            } while (choice == 'y' || choice == 'Y');
+            Console.WriteLine("Have a nice day!");
+
+        }
+        //3. Geometry Calculator  method ...
+        static void GeometryCalculator()
+        {
+            char choice;
+            do
+            {
+                int shap;
+                double length, width, radius, Area, perimeter, Circumference;
+                double p = 3.14;
+                Console.WriteLine("Select a shape: \n 1.Circle(Calculate Area & Circumference)" +
+                                  " \n 2.Square(Calculate Area & Perimeter)" +
+                                  " \n 3.Triangle(Calculate Area)");
+                shap = int.Parse(Console.ReadLine());
+
+                switch (shap)
+                {
+                    case 1:
+                        Console.WriteLine("Enter your circle radius: ");
+                        radius = double.Parse(Console.ReadLine());
+                        Area = p * (radius * radius);
+                        Circumference = 2 * p * radius;
+                        Console.WriteLine("Your circle area is: " + Area +
+                                          "\nYour circle Circumference is: " + Circumference);
+                        break;
+                    case 2:
+                        Console.WriteLine("Enter your square side length: ");
+                        length = double.Parse(Console.ReadLine());
+                        Area = length * length;
+                        perimeter = 4 * length;
+                        Console.WriteLine("Your square area is: " + Area +
+                                          "\n Your square perimeter is: " + perimeter);
+                        break;
+                    case 3:
+                        Console.WriteLine("Enter your triangle length: ");
+                        length = double.Parse(Console.ReadLine());
+                        Console.WriteLine("Enter your triangle width: ");
+                        width = double.Parse(Console.ReadLine());
+                        Area = length * width;
+                        Console.WriteLine("Your triangle area is: " + Area);
+                        break;
+                    default:
+                        Console.WriteLine("Wrong Choice!");
+                        break;
+                }
+
+                Console.WriteLine("Do you want another operation ? y / n");
+                choice = Console.ReadKey().KeyChar;
+
+            } while (choice == 'y' || choice == 'Y');
+            Console.WriteLine("Have a nice day!");
+
+
+        }
+        //4. Factorial of a Number  method ...
+        static void FactorialOfNumber()
+        {
+            int N;
+            int y = 2;
+            int result = 1;
+            Console.WriteLine("Enter your number: ");
+            N = int.Parse(Console.ReadLine());
+
+            if (N == 1 || N == 0)
+            {
+                Console.WriteLine("Your factorial of " + N + " is: " + result);
+            }
+            else if (N < 0)
+            {
+                Console.WriteLine("Wrong input!");
+            }
+            else
+            {
+                for (int i = 1; i < N; i++)
+                {
+                    result = result * y;
+                    y++;
+                }
+                Console.WriteLine("Your factorial of " + N + " is: " + result);
+            }
+        }
+        //5. Sum of Even and Odd Numbers   method ...
+        static void SumEvenOdd()
+        {
+            int N, check;
+            int sum_even = 0;
+            int sum_odd = 0;
+            Console.WriteLine("Enter your number: ");
+            N = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= N; i++)
+            {
+                check = i % 2;
+                if (check == 0)
+                {
+                    sum_even = sum_even + i;
+                }
+                else
+                {
+                    sum_odd = sum_odd + i;
+                }
+            }
+
+            Console.WriteLine("The sum of all even numbers in your number is: " + sum_even +
+                              "\nThe sum of all odd numbers in your number is: " + sum_odd);
+        }
+        //6. Scientific Calculator (Switch-Case & Math Functions)  method ...
+        static void ScientificCalculator()
+        {
+            char choice;
+            do
+            {
+                Console.Clear();
+                double operation, number, power;
+                Console.WriteLine("Enter your number: ");
+                number = double.Parse(Console.ReadLine());
+                Console.WriteLine("Select operation: \n1. sin \n2. cos \n3. tan \n4. sqrt \n5. log \n6. pow");
+                operation = double.Parse(Console.ReadLine());
+
+                switch (operation)
+                {
+                    case 1:
+                        Console.WriteLine(Math.Sin(number));
+                        break;
+                    case 2:
+                        Console.WriteLine(Math.Cos(number));
+                        break;
+                    case 3:
+                        Console.WriteLine(Math.Tan(number));
+                        break;
+                    case 4:
+                        Console.WriteLine(Math.Sqrt(number));
+                        break;
+                    case 5:
+                        Console.WriteLine(Math.Log(number));
+                        break;
+                    case 6:
+                        Console.WriteLine("Enter your power: ");
+                        power = double.Parse(Console.ReadLine());
+                        Console.WriteLine(Math.Pow(number, power));
+                        break;
+                    default:
+                        Console.WriteLine("Wrong input!");
+                        break;
+                }
+
+                Console.WriteLine("Do you want another operation ? y / n");
+                choice = Console.ReadKey().KeyChar;
+
+            } while (choice == 'y' || choice == 'Y');
+
+            Console.WriteLine("Have a nice day!");
+
+        }
+        //7. Print Pattern (For Loop)  method ...
+        static void RightAngledTrianglePattern()
+        {
+            int N; // Number of rows
+            Console.WriteLine("Enter number:");
+            N = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= N; i++) // Controls rows
+            {
+                for (int j = 1; j <= i; j++) // Controls columns
+                {
+                    Console.Write("* ");
+                }
+                Console.WriteLine(); // Move to next line
+            }
+        }
+        //8. Print a Pyramid Pattern (For Loop)  method ...
+        static void PyramidPattern()
+        {
+            int N; // Number of rows
+            Console.WriteLine("Enter number:");
+            N = int.Parse(Console.ReadLine());
+            for (int i = 1; i <= N; i++) // Controls rows
+            {
+                for (int j = 1; j <= N - i; j++) // Prints spaces
+                { Console.Write(" "); }
+                for (int k = 1; k <= 2 * i - 1; k++) // Prints stars
+                { Console.Write("*"); }
+                Console.WriteLine(); // Move to the next line
+            }
+        }
+        //9. Print a Diamond Pattern (For Loop)  method ...
+        static void DiamondPattern()
+        {
+            int N;
+            Console.WriteLine("Enter number:");
+            N = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= N; i++) // to go to the next line in the upper part
+            {
+                //calling PrintSpaceStart function ...
+                PrintSpaceStart(N, i);
+            }
+
+            for (int i = N - 1; i >= 1; i--) // to go to the next line in the lower part
+            {
+                //calling PrintSpaceStart function ...
+                PrintSpaceStart(N, i);
+            }
+        }
+        //10. Guess Game with helper  method ...
+        static void GuessGame()
+        {
+            char choice;
+            int count = 0;
+            do
+            {
+                int g_number;
+                //to generate a random number ...
+                Random rnd = new Random();
+                int num = rnd.Next(100);
+                // Console.WriteLine(num);
+                do
+                {
+                    Console.WriteLine("Guess my number: ");
+                    g_number = int.Parse(Console.ReadLine());
+
+                    if (g_number < num)
+                    {
+                        Console.WriteLine("Try Higher! ... ");
+                    }
+                    else if (g_number > num)
+                    {
+                        Console.WriteLine("Try Lower! ... ");
+                    }
+                    else
+                    {
+                        Console.WriteLine("You Win! ... in the " + (count + 1) + "try ...");
+                    }
+
+                    count = count + 1;
+
+                } while (g_number != num);
+
+
+                Console.WriteLine("Do you want to play again? y / n");
+                choice = Console.ReadKey().KeyChar;
+
+            } while (choice == 'y' || choice == 'Y');
+            Console.WriteLine("Have a nice day!");
+
+        }
+
     }
 }
