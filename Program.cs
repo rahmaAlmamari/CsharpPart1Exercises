@@ -708,7 +708,7 @@ namespace CsharpPart1Exercises
             //}
             //Console.WriteLine(space + output);
 
-            //-------------------- soluation 2:
+            //-------------------- soluation 2: using nested loop (6 loop)
             //int N;
             //Console.WriteLine("Enter number:");
             //N = int.Parse(Console.ReadLine());
@@ -745,15 +745,34 @@ namespace CsharpPart1Exercises
 
 
 
-            //---------------------------- soluation 3:
+            //---------------------------- soluation 3: using nested loop (5 loop)
             //int N;
             //Console.WriteLine("Enter number:");
             //N = int.Parse(Console.ReadLine());
             //int row = N + (N - 1);
             //for (int i = 1; i <= row; i++) //to go to the next line ...
             //{
-            //    for(int j = N - 1; J)
+            //    if(i <= N)
             //    {
+            //        for (int j = N - i; j >= 1; j--)
+            //        {
+            //            Console.Write(" ");
+            //        }
+            //        for (int r = 1; r <= (i * 2 - 1); r++)
+            //        {
+            //            Console.Write("*");
+            //        }
+            //    }
+            //    else
+            //    {
+            //        for (int j = i-N; j <= ((i-N) * 2 - 1); j++)
+            //        {
+            //            Console.Write(" ");
+            //        }
+            //        for (int r = (N * 2 - 3); r >= ((i - N) * 2 - 1); r--)
+            //        {
+            //            Console.Write("*");
+            //        }
             //    }
             //    Console.WriteLine();
             //}
