@@ -958,7 +958,7 @@ namespace CsharpPart1Exercises
             //int odd = 0;
             //int even = 0;
             //Console.WriteLine("Enter the element:");
-            
+
             //for(int i=0; i<N; i++)
             //{
             //    element[i] = int.Parse(Console.ReadLine());
@@ -975,7 +975,47 @@ namespace CsharpPart1Exercises
             //Console.WriteLine("You have " + even + " even element in your array");
             //Console.WriteLine("You have " + odd + " odd element in your array");
 
-           
+            //--------------------------------------------------------------------------------
+
+            //4.Reverse an Array
+            //o Ask the user for N numbers. 
+            //o Reverse the array and print the result.
+
+            //int N;
+            //Console.WriteLine("Enter the number of element you want: ");
+            //N = int.Parse(Console.ReadLine());
+            //int[] array_x = new int[N];
+            //Console.WriteLine("Enter the element:");
+
+            //for (int i = 0; i < N; i++)
+            //{
+            //    array_x[i] = int.Parse(Console.ReadLine());
+          
+            //}
+            //Array.Reverse(array_x);
+            //Console.WriteLine("Your array after reverse is: ");
+            //for (int i = 0; i < N; i++)
+            //{
+            //    Console.WriteLine("Element " + i + "is " + array_x[i]);
+
+            //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
             ///end of main method ............................................
         }
