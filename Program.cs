@@ -1168,6 +1168,28 @@ namespace CsharpPart1Exercises
 
             //}
 
+            //--------------------------------------------------------------------------------
+
+            //9.Second Largest Number in an Array 
+            // • Input N numbers into an array. 
+            // • Find and display the second - largest number.
+
+            //int N;
+            //Console.WriteLine("Enter the number of element you want: ");
+            //N = int.Parse(Console.ReadLine());
+            //int[] array_x = new int[N];
+            //Console.WriteLine("Enter the element:");
+
+            //for (int i = 0; i < N; i++)
+            //{
+            //    array_x[i] = int.Parse(Console.ReadLine());
+
+            //}
+            //Array.Sort(array_x);
+            //Console.WriteLine("Your second largest number is:" + array_x[N-2]);
+
+
+
 
 
 
