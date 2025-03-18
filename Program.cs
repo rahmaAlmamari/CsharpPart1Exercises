@@ -1118,20 +1118,20 @@ namespace CsharpPart1Exercises
             ////{
             ////    if(i < N)
             ////    {
-                   
+
             ////            final_array[i] = array_x[i];
-                    
+
             ////    }
             ////    else
             ////    {
-                   
+
             ////            if(i>=N || i < N * 2)
             ////        {
             ////            final_array[i] = array_y[i];
             ////        }                      
-                            
-                       
-                    
+
+
+
             ////    }
             ////}
 
@@ -1142,11 +1142,31 @@ namespace CsharpPart1Exercises
 
             //}
 
+            //----------------------------------------------------------------------------------
 
+            //8.Remove Duplicates from an Array
+            // o Ask the user to enter N numbers. 
+            // o Remove duplicate values and print the unique numbers.
 
+            //int N;
+            //Console.WriteLine("Enter the number of element you want: ");
+            //N = int.Parse(Console.ReadLine());
+            //int[] array_x = new int[N];
+            //Console.WriteLine("Enter the element:");
 
+            //for (int i = 0; i < N; i++)
+            //{
+            //    array_x[i] = int.Parse(Console.ReadLine());
 
+            //}
+            ////int[] distinct = arr.Distinct().ToArray();
+            //int[] new_array = array_x.Distinct().ToArray();
+            //Console.WriteLine("Your array without duplicates:");
+            //for (int i = 0; i < new_array.Length; i++)
+            //{
+            //    Console.WriteLine(new_array[i]);
 
+            //}
 
 
 
