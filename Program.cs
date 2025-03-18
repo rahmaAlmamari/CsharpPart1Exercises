@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Diagnostics.Metrics;
+using System.Drawing;
 using System.Linq;
 using System.Numerics;
 using System.Reflection;
@@ -1086,6 +1087,60 @@ namespace CsharpPart1Exercises
             //}
 
             //-----------------------------------------------------------------
+
+            //7.Merging Two Arrays
+            //  o Ask the user for two arrays of the same size.
+            //  o Merge them into one larger array.
+            //  o Print the final array.
+
+            //int N;
+            //Console.WriteLine("Enter the size of your arrays:");
+            //N = int.Parse(Console.ReadLine());
+            //int[] array_x = new int[N];
+            //int[] array_y = new int[N];
+
+            //Console.WriteLine("Enter the elements for array X:");
+            //for (int i = 0; i < N; i++)
+            //{
+            //    array_x[i] = int.Parse(Console.ReadLine());
+
+            //}
+
+            //Console.WriteLine("Enter the elements for array Y:");
+            //for (int i = 0; i < N; i++)
+            //{
+            //    array_y[i] = int.Parse(Console.ReadLine());
+
+            //}
+            ////int[] result = array1.Concat(array2).ToArray();
+            //int[] final_array = array_x.Concat(array_y).ToArray();
+            ////for(int i=0; i<N*2; i++)
+            ////{
+            ////    if(i < N)
+            ////    {
+                   
+            ////            final_array[i] = array_x[i];
+                    
+            ////    }
+            ////    else
+            ////    {
+                   
+            ////            if(i>=N || i < N * 2)
+            ////        {
+            ////            final_array[i] = array_y[i];
+            ////        }                      
+                            
+                       
+                    
+            ////    }
+            ////}
+
+            //Console.WriteLine("Your final array is: ");
+            //for (int i = 0; i < N*2; i++)
+            //{
+            //    Console.WriteLine(final_array[i]);
+
+            //}
 
 
 
