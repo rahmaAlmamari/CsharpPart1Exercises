@@ -3,10 +3,12 @@ using System.Diagnostics;
 using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Numerics;
+using System.Reflection;
 using System.Reflection.Metadata;
 using System.Runtime.Intrinsics.X86;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CsharpPart1Exercises
@@ -990,7 +992,7 @@ namespace CsharpPart1Exercises
             //for (int i = 0; i < N; i++)
             //{
             //    array_x[i] = int.Parse(Console.ReadLine());
-          
+
             //}
             //Array.Reverse(array_x);
             //Console.WriteLine("Your array after reverse is: ");
@@ -1000,9 +1002,47 @@ namespace CsharpPart1Exercises
 
             //}
 
+            //-------------------------------------------------------------------------------
+
+            //5.Search for a Number in an Array
+            //  o Input N numbers into an array.
+            //  o Ask for a number to search for and check if it exists in the array. 
+            //  o If found, display its index.
+
+            //int N;
+            //Console.WriteLine("Enter the number of element you want: ");
+            //N = int.Parse(Console.ReadLine());
+            //int[] array_x = new int[N];
+            //Console.WriteLine("Enter the element:");
+
+            //for (int i = 0; i < N; i++)
+            //{
+            //    array_x[i] = int.Parse(Console.ReadLine());
+
+            //}
+            //int search_num;
+            //int count_exit = 0;
+            //Console.WriteLine("Enter a number to search in your array:");
+            //search_num = int.Parse(Console.ReadLine());
+            //for (int i = 0; i < N; i++)
+            //{
+            //    if (array_x[i] == search_num)
+            //    {
+            //        count_exit = count_exit + 1;
+            //    }
+            //}
+            //if(count_exit > 0)
+            //{
+            //    Console.WriteLine("The number you are searching for exit " + count_exit + " time in the array");
+            //    Console.WriteLine("Your number is in index " + Array.IndexOf(array_x, search_num));
+            //}
+            //else
+            //{
+            //    Console.WriteLine("The number you are searching for is not exit in the array ... sory!");
+            //}
 
 
-
+            //------------------------------------------------------------------------
 
 
 
