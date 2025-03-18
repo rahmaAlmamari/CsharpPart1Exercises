@@ -860,48 +860,90 @@ namespace CsharpPart1Exercises
             //    PrintSpaceStart(N, i);
             //}
 
+            // combain all task in exercises 2 togather .............
 
-            while (true) // we use while loop to repeat the process and we set true so it will not stop ... 
-            {
-                Console.Clear();
-                Console.WriteLine("Select program: ");
-                Console.WriteLine("1. Simple Calculator");
-                Console.WriteLine("2. Basic ATM System");
-                Console.WriteLine("3. Geometry Calculator");
-                Console.WriteLine("4. Factorial of a Number");
-                Console.WriteLine("5. Sum of Even and Odd Numbers");
-                Console.WriteLine("6. Scientific Calculator");
-                Console.WriteLine("7. Print Right Angled Triangle Pattern");
-                Console.WriteLine("8. Print a Pyramid Pattern");
-                Console.WriteLine("9. Print a Diamond Pattern");
-                Console.WriteLine("10. Guess Number Game");
-                Console.WriteLine("11. Exit");
 
-                Console.Write("Enter your choice: ");
-                int choice = int.Parse(Console.ReadLine());
+            //while (true) // we use while loop to repeat the process and we set true so it will not stop ... 
+            //{
+            //    Console.Clear();
+            //    Console.WriteLine("Select program: ");
+            //    Console.WriteLine("1. Simple Calculator");
+            //    Console.WriteLine("2. Basic ATM System");
+            //    Console.WriteLine("3. Geometry Calculator");
+            //    Console.WriteLine("4. Factorial of a Number");
+            //    Console.WriteLine("5. Sum of Even and Odd Numbers");
+            //    Console.WriteLine("6. Scientific Calculator");
+            //    Console.WriteLine("7. Print Right Angled Triangle Pattern");
+            //    Console.WriteLine("8. Print a Pyramid Pattern");
+            //    Console.WriteLine("9. Print a Diamond Pattern");
+            //    Console.WriteLine("10. Guess Number Game");
+            //    Console.WriteLine("11. Exit");
 
-                switch (choice)
-                {
-                    case 1: SimpleCalculator();  break;
-                    case 2: BasicATMSystem();  break;
-                    case 3: GeometryCalculator();  break;
-                    case 4: FactorialOfNumber();  break;
-                    case 5: SumEvenOdd();  break;
-                    case 6: ScientificCalculator(); break;
-                    case 7: RightAngledTrianglePattern();  break;
-                    case 8: PyramidPattern(); break;
-                    case 9: DiamondPattern(); break;
-                    case 10: GuessGame(); break;
-                    case 11: Console.WriteLine("Have a nice day ..."); return;
-                    default: Console.WriteLine("\n You enter unaccepted choice! ... try again"); break;
-                }
-                Console.ReadLine();// we add this line just to stop the program from clear 'Console.Clear();' the screen before the user see the result ...
+            //    Console.Write("Enter your choice: ");
+            //    int choice = int.Parse(Console.ReadLine());
 
-            }
+            //    switch (choice)
+            //    {
+            //        case 1: SimpleCalculator();  break;
+            //        case 2: BasicATMSystem();  break;
+            //        case 3: GeometryCalculator();  break;
+            //        case 4: FactorialOfNumber();  break;
+            //        case 5: SumEvenOdd();  break;
+            //        case 6: ScientificCalculator(); break;
+            //        case 7: RightAngledTrianglePattern();  break;
+            //        case 8: PyramidPattern(); break;
+            //        case 9: DiamondPattern(); break;
+            //        case 10: GuessGame(); break;
+            //        case 11: Console.WriteLine("Have a nice day ..."); return;
+            //        default: Console.WriteLine("\n You enter unaccepted choice! ... try again"); break;
+            //    }
+            //    Console.ReadLine();// we add this line just to stop the program from clear 'Console.Clear();' the screen before the user see the result ...
+
+            //}
+
+
+
+
+
+            /// C# Part3 Exercises  
+            /// 
+
+
+
+
+
+            ////1. Array Initialization & Output
+            //    o Declare an array of 5 integers.
+            //    o Assign values and print them using a for loop.
+
+            //int[] array_int = new int[5]; //declare the array ....
+            //for (int i=0; i<5; i++) ///input array elements .....
+            //{
+            //    Console.WriteLine("enter the element " + (i + 1) + " in your array");
+            //    array_int[i] = int.Parse(Console.ReadLine());
+            //}
+            //for (int i = 0; i < 5; i++)//print array elements .......
+            //{
+            //    Console.WriteLine("Your element " + (i+1) + " is: " + array_int[i]);
+
+            //}
+
+            //-----------------------------------------------------------------------------------
+
+            //2.Find Maximum & Minimum in an Array
+            //  o Ask the user to enter 10 numbers.
+            //  o Find and display the maximum and minimum values.
+
+            int[] number
+
+
 
 
 
         }
+
+
+
         //method for print space and start //
         static void PrintSpaceStart(int N, int i)
         {
@@ -981,9 +1023,10 @@ namespace CsharpPart1Exercises
         static void BasicATMSystem()
         {
             char choice;
+            double balance = 1000;
             do
             {
-                double balance = 1000;
+                
                 double user_Emoney, available;
                 int options;
                 Console.WriteLine("Select Options: \n 1.Withdraw Money \n 2.Deposit Money \n 3.Check Balance \n 4.Exit");
