@@ -5,6 +5,7 @@ using System.Linq;
 using System.Numerics;
 using System.Reflection.Metadata;
 using System.Runtime.Intrinsics.X86;
+using System.Security.Cryptography;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -944,11 +945,39 @@ namespace CsharpPart1Exercises
             //Console.WriteLine("Your maximum number is: " + number[9]);
             //Console.WriteLine("Your minimum number is: " + number[0]);
 
+            //---------------------------------------------------------------------------------------
+
+            //3.Count Even & Odd Numbers
+            // o Ask the user to input N numbers into an array. 
+            // o Count and display how many numbers are even and odd.
+
+            //int N;
+            //Console.WriteLine("Enter the number of element you want: ");
+            //N = int.Parse(Console.ReadLine());
+            //int[] element = new int[N];
+            //int odd = 0;
+            //int even = 0;
+            //Console.WriteLine("Enter the element:");
             
+            //for(int i=0; i<N; i++)
+            //{
+            //    element[i] = int.Parse(Console.ReadLine());
+            //    if(element[i] % 2 == 0)
+            //    {
+            //        even = even + 1;
+            //    }
+            //    else
+            //    {
+            //        odd = odd + 1;
+            //    }
+            //}
 
+            //Console.WriteLine("You have " + even + " even element in your array");
+            //Console.WriteLine("You have " + odd + " odd element in your array");
 
+           
 
-
+            ///end of main method ............................................
         }
 
 
