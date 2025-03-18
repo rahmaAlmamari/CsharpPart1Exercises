@@ -5,6 +5,7 @@ using System.Linq;
 using System.Numerics;
 using System.Reflection;
 using System.Reflection.Metadata;
+using System.Runtime.CompilerServices;
 using System.Runtime.Intrinsics.X86;
 using System.Security.Cryptography;
 using System.Threading.Tasks;
@@ -1043,6 +1044,48 @@ namespace CsharpPart1Exercises
 
 
             //------------------------------------------------------------------------
+
+            //6.Sorting an Array(Ascending Order)
+            //  o Ask the user for N numbers. 
+            //  o Sort them in ascending order(using Bubble Sort or Array.Sort()). 
+
+            //int N;
+            //Console.WriteLine("Enter the number of element you want: ");
+            //N = int.Parse(Console.ReadLine());
+            //int[] array_x = new int[N];
+            //Console.WriteLine("Enter the element:");
+
+            //for (int i = 0; i < N; i++)
+            //{
+            //    array_x[i] = int.Parse(Console.ReadLine());
+
+            //}
+            //Array.Sort(array_x);
+
+            ////int temp;
+            ////int r = 0;
+            ////for(int j=0; j<N-r; j++)
+            ////{
+            ////    for (int i = 0; i < array_x.Length -1; i++)
+            ////    {
+            ////        if (array_x[i] > array_x[i + 1])
+            ////        {
+            ////            temp = array_x[i];
+            ////            array_x[i] = array_x[i + 1];
+            ////            array_x[i + 1] = temp;
+            ////        }
+
+            ////    }
+            ////    r++;
+            ////}
+            //Console.WriteLine("Your array after sorte 'Ascending': ");
+            //for (int y = 0; y < N; y++)
+            //{
+            //    Console.WriteLine(array_x[y]);
+
+            //}
+
+            //-----------------------------------------------------------------
 
 
 
