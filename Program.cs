@@ -934,8 +934,17 @@ namespace CsharpPart1Exercises
             //  o Ask the user to enter 10 numbers.
             //  o Find and display the maximum and minimum values.
 
-            int[] number
+            //int[] number = new int[10];
+            //Console.WriteLine("Enter 1o number: ");
+            //for(int i=0; i<10; i++)
+            //{
+            //    number[i] = int.Parse(Console.ReadLine());
+            //}
+            //Array.Sort(number);
+            //Console.WriteLine("Your maximum number is: " + number[9]);
+            //Console.WriteLine("Your minimum number is: " + number[0]);
 
+            
 
 
 
