@@ -1117,61 +1117,61 @@ namespace CsharpPart1Exercises
             // combain all task in exercises 2 and 3 togather .............
 
 
-            //while (true) // we use while loop to repeat the process and we set true so it will not stop ... 
-            //{
-            //    Console.Clear();
-            //    Console.WriteLine("Select program: ");
-            //    Console.WriteLine("1.  Simple Calculator");
-            //    Console.WriteLine("2.  Basic ATM System");
-            //    Console.WriteLine("3.  Geometry Calculator");
-            //    Console.WriteLine("4.  Factorial of a Number");
-            //    Console.WriteLine("5.  Sum of Even and Odd Numbers");
-            //    Console.WriteLine("6.  Scientific Calculator");
-            //    Console.WriteLine("7.  Print Right Angled Triangle Pattern");
-            //    Console.WriteLine("8.  Print a Pyramid Pattern");
-            //    Console.WriteLine("9.  Print a Diamond Pattern");
-            //    Console.WriteLine("10. Guess Number Game");
-            //    Console.WriteLine("11. Array Initialization & Output");
-            //    Console.WriteLine("12. Find Maximum & Minimum in an Array");
-            //    Console.WriteLine("13. Count Even & Odd Numbers");
-            //    Console.WriteLine("14. Reverse an Array");
-            //    Console.WriteLine("15. Search for a Number in an Array");
-            //    Console.WriteLine("16. Sorting an Array (Ascending Order)");
-            //    Console.WriteLine("17. Merging Two Arrays");
-            //    Console.WriteLine("18. Remove Duplicates from an Array");
-            //    Console.WriteLine("19. Second Largest Number in an Array");
-            //    Console.WriteLine("0.  Exit");
+            while (true) // we use while loop to repeat the process and we set true so it will not stop ... 
+            {
+                Console.Clear();
+                Console.WriteLine("Select program: ");
+                Console.WriteLine("1.  Simple Calculator");
+                Console.WriteLine("2.  Basic ATM System");
+                Console.WriteLine("3.  Geometry Calculator");
+                Console.WriteLine("4.  Factorial of a Number");
+                Console.WriteLine("5.  Sum of Even and Odd Numbers");
+                Console.WriteLine("6.  Scientific Calculator");
+                Console.WriteLine("7.  Print Right Angled Triangle Pattern");
+                Console.WriteLine("8.  Print a Pyramid Pattern");
+                Console.WriteLine("9.  Print a Diamond Pattern");
+                Console.WriteLine("10. Guess Number Game");
+                Console.WriteLine("11. Array Initialization & Output");
+                Console.WriteLine("12. Find Maximum & Minimum in an Array");
+                Console.WriteLine("13. Count Even & Odd Numbers");
+                Console.WriteLine("14. Reverse an Array");
+                Console.WriteLine("15. Search for a Number in an Array");
+                Console.WriteLine("16. Sorting an Array (Ascending Order)");
+                Console.WriteLine("17. Merging Two Arrays");
+                Console.WriteLine("18. Remove Duplicates from an Array");
+                Console.WriteLine("19. Second Largest Number in an Array");
+                Console.WriteLine("0.  Exit");
 
-            //    Console.Write("Enter your choice: ");
-            //    int choice = int.Parse(Console.ReadLine());
+                Console.Write("Enter your choice: ");
+                int choice = int.Parse(Console.ReadLine());
 
-            //    switch (choice)
-            //    {
-            //        case 1: SimpleCalculator(); break;
-            //        case 2: BasicATMSystem(); break;
-            //        case 3: GeometryCalculator(); break;
-            //        case 4: FactorialOfNumber(); break;
-            //        case 5: SumEvenOdd(); break;
-            //        case 6: ScientificCalculator(); break;
-            //        case 7: RightAngledTrianglePattern(); break;
-            //        case 8: PyramidPattern(); break;
-            //        case 9: DiamondPattern(); break;
-            //        case 10: GuessGame(); break;
-            //        case 11: ArrayInitializationOutput(); break;
-            //        case 12: FindMaximumMinimumInArray(); break;
-            //        case 13: CountEvenAndOddNumbers(); break;
-            //        case 14: ReverseAnArray(); break;
-            //        case 15: SearchForNumberInArray(); break;
-            //        case 16: SortingArrayAscendingOrder(); break;
-            //        case 17: MergingTwoArrays(); break;
-            //        case 18: RemoveDuplicatesFromArray(); break;
-            //        case 19: SecondLargestNumberInArray(); break;
-            //        case 0: Console.WriteLine("Have a nice day ..."); return;
-            //        default: Console.WriteLine("\n You enter unaccepted choice! ... try again"); break;
-            //    }
-            //    Console.ReadLine();// we add this line just to stop the program from clear 'Console.Clear();' the screen before the user see the result ...
+                switch (choice)
+                {
+                    case 1: SimpleCalculator(); break;
+                    case 2: BasicATMSystem(); break;
+                    case 3: GeometryCalculator(); break;
+                    case 4: FactorialOfNumber(); break;
+                    case 5: SumEvenOdd(); break;
+                    case 6: ScientificCalculator(); break;
+                    case 7: RightAngledTrianglePattern(); break;
+                    case 8: PyramidPattern(); break;
+                    case 9: DiamondPattern(); break;
+                    case 10: GuessGame(); break;
+                    case 11: ArrayInitializationOutput(); break;
+                    case 12: FindMaximumMinimumInArray(); break;
+                    case 13: CountEvenAndOddNumbers(); break;
+                    case 14: ReverseAnArray(); break;
+                    case 15: SearchForNumberInArray(); break;
+                    case 16: SortingArrayAscendingOrder(); break;
+                    case 17: MergingTwoArrays(); break;
+                    case 18: RemoveDuplicatesFromArray(); break;
+                    case 19: SecondLargestNumberInArray(); break;
+                    case 0: Console.WriteLine("Have a nice day ..."); return;
+                    default: Console.WriteLine("\n You enter unaccepted choice! ... try again"); break;
+                }
+                Console.ReadLine();// we add this line just to stop the program from clear 'Console.Clear();' the screen before the user see the result ...
 
-            //}
+            }
 
 
 
@@ -1566,9 +1566,21 @@ namespace CsharpPart1Exercises
             {
                 number[i] = int.Parse(Console.ReadLine());
             }
-            Array.Sort(number);
-            Console.WriteLine("Your maximum number is: " + number[9]);
-            Console.WriteLine("Your minimum number is: " + number[0]);
+            //soluation 1 ......
+            //Array.Sort(number);
+            //Console.WriteLine("Your maximum number is: " + number[9]);
+            //Console.WriteLine("Your minimum number is: " + number[0]);
+            //soluation 2 ......
+            int max = number[0], min = number[0];
+            for (int i = 1; i < number.Length; i++)
+            {
+                if (number[i] > max)
+                    max = number[i];
+
+                if (number[i] < min)
+                    min = number[i];
+            }
+            Console.WriteLine($"Max: {max}, Min: {min}");
         }
         //13. Count Even & Odd Numbers ...
         static void CountEvenAndOddNumbers()
@@ -1606,13 +1618,18 @@ namespace CsharpPart1Exercises
             int[] array_x = new int[N];
 
             InsertArrayElement(N, array_x);
-            Array.Reverse(array_x);
-            Console.WriteLine("Your array after reverse is: ");
-            for (int i = 0; i < N; i++)
-            {
-                Console.WriteLine("Element " + i + "is " + array_x[i]);
+            //soluation 1 .... 
+            //Array.Reverse(array_x);
+            //Console.WriteLine("Your array after reverse is: ");
+            //for (int i = 0; i < N; i++)
+            //{
+            //    Console.WriteLine("Element " + i + "is " + array_x[i]);
+            //}
+            //soluation 2 ....
+            Console.WriteLine("Reversed Array:");
+            for (int i = N - 1; i >= 0; i--)
+                Console.Write(array_x[i] + " ");
 
-            }
         }
         //15. Search for a Number in an Array ...
         static void SearchForNumberInArray()
@@ -1626,22 +1643,94 @@ namespace CsharpPart1Exercises
             int count_exit = 0;
             Console.WriteLine("Enter a number to search in your array:");
             search_num = int.Parse(Console.ReadLine());
-            for (int i = 0; i < N; i++)
+            //soluation 1 ....
+            //for (int i = 0; i < N; i++)
+            //{
+            //    if (array_x[i] == search_num)
+            //    {
+            //        count_exit = count_exit + 1;
+            //    }
+            //}
+            //if (count_exit > 0)
+            //{
+            //    Console.WriteLine("The number you are searching for exit " + count_exit + " time in the array");
+            //    Console.WriteLine("Your number is in index " + Array.IndexOf(array_x, search_num));
+            //}
+            //else
+            //{
+            //    Console.WriteLine("The number you are searching for is not exit in the array ... sory!");
+            //}
+            //soluation 2 .....
+            int option;
+            Console.WriteLine("Select search type: \n 1. get the first \n 2. get the last \n 3. get all");
+            option = int.Parse(Console.ReadLine());
+            int flag = -1;
+            int index = 0;
+            int count = 0;
+            int[] indexes = new int[array_x.Length];
+
+            for (int i = 0; i < array_x.Length; i++)
             {
-                if (array_x[i] == search_num)
+                switch (option)
                 {
-                    count_exit = count_exit + 1;
+                    case 1:
+                        // soluation to get the first index for the search_num shown in the array .... 
+                        if (array_x[i] == search_num)
+                        {
+                            // Console.WriteLine(i);
+                            index = i;
+                            flag = 0;
+                            break; // when it found the search_num for the first time it will stop loop ... 
+                        }
+                        break;
+                    case 2:
+                        // soluation to get the last index for the search_num shown in the array "dose not have break
+                        // so it will loop until the a array is finish and get the last index".... 
+                        if (array_x[i] == search_num)
+                        {
+                            // Console.WriteLine(i);
+                            index = i;
+                            flag = 0;
+                        }
+                        break;
+                    case 3:
+                        ////soluation to get all index that search_num shown on in the array ....
+                        if (array_x[i] == search_num)
+                        {
+                            indexes[count] = i;
+                            count++;
+                        }
+                        flag = 0;
+                        break;
+                    default:
+                        Console.WriteLine("Wrong input!");
+                        break;
                 }
             }
-            if (count_exit > 0)
+
+            if (flag == 0)
             {
-                Console.WriteLine("The number you are searching for exit " + count_exit + " time in the array");
-                Console.WriteLine("Your number is in index " + Array.IndexOf(array_x, search_num));
+                if(option == 1 || option == 2)
+                {
+                    Console.WriteLine("Your number is in index " + index);
+                }
+                else
+                {
+                    Console.WriteLine("The number you are searching for exit " + count + " time in the array");
+                    for(int i = 0; i< indexes.Length; i++)
+                    {
+                        Console.WriteLine(indexes[i]);
+                    }
+                }
             }
             else
             {
-                Console.WriteLine("The number you are searching for is not exit in the array ... sory!");
+                Console.WriteLine("not found");
             }
+            //Console.WriteLine(index);
+                
+
+
 
         }
         //16. Sorting an Array (Ascending Order) ... 
@@ -1674,15 +1763,31 @@ namespace CsharpPart1Exercises
 
             Console.WriteLine("Array Y:");
             InsertArrayElement(N, array_y);
-            //int[] result = array1.Concat(array2).ToArray();
-            int[] final_array = array_x.Concat(array_y).ToArray();
 
-            Console.WriteLine("Your final array is: ");
-            for (int i = 0; i < N * 2; i++)
+            //soluation 1 .....
+            //int[] result = array1.Concat(array2).ToArray();
+            //int[] final_array = array_x.Concat(array_y).ToArray();
+
+            //Console.WriteLine("Your final array is: ");
+            //for (int i = 0; i < N * 2; i++)
+            //{
+            //    Console.WriteLine(final_array[i]);
+            //}
+
+            //soluation 2 ....
+            int[] final_array = new int[N * 2];
+            for(int i=0; i<N; i++)//to insert the elements of array_x and array_y in final array ...
+            {
+                final_array[i] = array_x[i];
+                final_array[N + i] = array_y[i];
+            }
+            //print final_array ......
+            Console.WriteLine("Your array after merging: ");
+            for(int i=0; i<N*2; i++)
             {
                 Console.WriteLine(final_array[i]);
-
             }
+
         }
         //18. Remove Duplicates from an Array ...
         static void RemoveDuplicatesFromArray()
@@ -1692,14 +1797,33 @@ namespace CsharpPart1Exercises
             N = int.Parse(Console.ReadLine());
             int[] array_x = new int[N];
             InsertArrayElement(N, array_x);
-            //int[] distinct = arr.Distinct().ToArray();
-            int[] new_array = array_x.Distinct().ToArray();
-            Console.WriteLine("Your array without duplicates:");
-            for (int i = 0; i < new_array.Length; i++)
-            {
-                Console.WriteLine(new_array[i]);
 
+            //soluation 1 ... 
+            //int[] distinct = arr.Distinct().ToArray();
+            //int[] new_array = array_x.Distinct().ToArray();
+            //Console.WriteLine("Your array without duplicates:");
+            //for (int i = 0; i < new_array.Length; i++)
+            //{
+            //    Console.WriteLine(new_array[i]);
+            //}
+
+            //soluation 2 .....
+
+            Console.WriteLine("Array without duplicates:");
+            for (int i = 0; i < N; i++)
+            {
+                bool isDuplicate = false;
+                for (int j = i + 1; j < N; j++)
+                {
+                    if (array_x[i] == array_x[j])
+                    {
+                        isDuplicate = true;
+                        break;
+                    }
+                }
+                if (!isDuplicate) Console.Write(array_x[i] + " ");
             }
+
         }
         //19. Second Largest Number in an Array ...
         static void SecondLargestNumberInArray()
@@ -1709,8 +1833,27 @@ namespace CsharpPart1Exercises
             N = int.Parse(Console.ReadLine());
             int[] array_x = new int[N];
             InsertArrayElement(N, array_x);
-            Array.Sort(array_x);
-            Console.WriteLine("Your second largest number is:" + array_x[N - 2]);
+
+            //soluation 1 .....
+            //Array.Sort(array_x);
+            //Console.WriteLine("Your second largest number is:" + array_x[N - 2]);
+
+            //soluation 2 ...
+            int largest = array_x[0], secondLargest = array_x[0];
+
+            for (int i = 0; i < N; i++)
+            {
+                if (array_x[i] > largest)
+                {
+                    secondLargest = largest;
+                    largest = array_x[i];
+                }
+                else if (array_x[i] > secondLargest && array_x[i] != largest)
+                    secondLargest = array_x[i];
+            }
+            Console.WriteLine($"Second Largest: {secondLargest}");
+
+
         }
 
 
