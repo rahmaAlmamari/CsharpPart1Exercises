@@ -882,7 +882,7 @@ namespace CsharpPart1Exercises
             //    Console.WriteLine("8. Print a Pyramid Pattern");
             //    Console.WriteLine("9. Print a Diamond Pattern");
             //    Console.WriteLine("10. Guess Number Game");
-            //    Console.WriteLine("11. Exit");
+            //    Console.WriteLine("0. Exit");
 
             //    Console.Write("Enter your choice: ");
             //    int choice = int.Parse(Console.ReadLine());
@@ -899,7 +899,7 @@ namespace CsharpPart1Exercises
             //        case 8: PyramidPattern(); break;
             //        case 9: DiamondPattern(); break;
             //        case 10: GuessGame(); break;
-            //        case 11: Console.WriteLine("Have a nice day ..."); return;
+            //        case 0: Console.WriteLine("Have a nice day ..."); return;
             //        default: Console.WriteLine("\n You enter unaccepted choice! ... try again"); break;
             //    }
             //    Console.ReadLine();// we add this line just to stop the program from clear 'Console.Clear();' the screen before the user see the result ...
@@ -989,13 +989,8 @@ namespace CsharpPart1Exercises
             //Console.WriteLine("Enter the number of element you want: ");
             //N = int.Parse(Console.ReadLine());
             //int[] array_x = new int[N];
-            //Console.WriteLine("Enter the element:");
 
-            //for (int i = 0; i < N; i++)
-            //{
-            //    array_x[i] = int.Parse(Console.ReadLine());
-
-            //}
+            //InsertArrayElement(N, array_x);
             //Array.Reverse(array_x);
             //Console.WriteLine("Your array after reverse is: ");
             //for (int i = 0; i < N; i++)
@@ -1015,13 +1010,7 @@ namespace CsharpPart1Exercises
             //Console.WriteLine("Enter the number of element you want: ");
             //N = int.Parse(Console.ReadLine());
             //int[] array_x = new int[N];
-            //Console.WriteLine("Enter the element:");
-
-            //for (int i = 0; i < N; i++)
-            //{
-            //    array_x[i] = int.Parse(Console.ReadLine());
-
-            //}
+            //InsertArrayElement(N, array_x);
             //int search_num;
             //int count_exit = 0;
             //Console.WriteLine("Enter a number to search in your array:");
@@ -1033,7 +1022,7 @@ namespace CsharpPart1Exercises
             //        count_exit = count_exit + 1;
             //    }
             //}
-            //if(count_exit > 0)
+            //if (count_exit > 0)
             //{
             //    Console.WriteLine("The number you are searching for exit " + count_exit + " time in the array");
             //    Console.WriteLine("Your number is in index " + Array.IndexOf(array_x, search_num));
@@ -1054,13 +1043,7 @@ namespace CsharpPart1Exercises
             //Console.WriteLine("Enter the number of element you want: ");
             //N = int.Parse(Console.ReadLine());
             //int[] array_x = new int[N];
-            //Console.WriteLine("Enter the element:");
-
-            //for (int i = 0; i < N; i++)
-            //{
-            //    array_x[i] = int.Parse(Console.ReadLine());
-
-            //}
+            //InsertArrayElement(N, array_x);
             //Array.Sort(array_x);
 
             ////int temp;
@@ -1099,19 +1082,11 @@ namespace CsharpPart1Exercises
             //int[] array_x = new int[N];
             //int[] array_y = new int[N];
 
-            //Console.WriteLine("Enter the elements for array X:");
-            //for (int i = 0; i < N; i++)
-            //{
-            //    array_x[i] = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Array X:");
+            //InsertArrayElement(N, array_x);
 
-            //}
-
-            //Console.WriteLine("Enter the elements for array Y:");
-            //for (int i = 0; i < N; i++)
-            //{
-            //    array_y[i] = int.Parse(Console.ReadLine());
-
-            //}
+            //Console.WriteLine("Array Y:");
+            //InsertArrayElement(N, array_y);
             ////int[] result = array1.Concat(array2).ToArray();
             //int[] final_array = array_x.Concat(array_y).ToArray();
             ////for(int i=0; i<N*2; i++)
@@ -1136,7 +1111,7 @@ namespace CsharpPart1Exercises
             ////}
 
             //Console.WriteLine("Your final array is: ");
-            //for (int i = 0; i < N*2; i++)
+            //for (int i = 0; i < N * 2; i++)
             //{
             //    Console.WriteLine(final_array[i]);
 
@@ -1152,13 +1127,7 @@ namespace CsharpPart1Exercises
             //Console.WriteLine("Enter the number of element you want: ");
             //N = int.Parse(Console.ReadLine());
             //int[] array_x = new int[N];
-            //Console.WriteLine("Enter the element:");
-
-            //for (int i = 0; i < N; i++)
-            //{
-            //    array_x[i] = int.Parse(Console.ReadLine());
-
-            //}
+            //InsertArrayElement(N, array_x);
             ////int[] distinct = arr.Distinct().ToArray();
             //int[] new_array = array_x.Distinct().ToArray();
             //Console.WriteLine("Your array without duplicates:");
@@ -1178,15 +1147,9 @@ namespace CsharpPart1Exercises
             //Console.WriteLine("Enter the number of element you want: ");
             //N = int.Parse(Console.ReadLine());
             //int[] array_x = new int[N];
-            //Console.WriteLine("Enter the element:");
-
-            //for (int i = 0; i < N; i++)
-            //{
-            //    array_x[i] = int.Parse(Console.ReadLine());
-
-            //}
+            //InsertArrayElement(N, array_x);
             //Array.Sort(array_x);
-            //Console.WriteLine("Your second largest number is:" + array_x[N-2]);
+            //Console.WriteLine("Your second largest number is:" + array_x[N - 2]);
 
 
 
@@ -1202,21 +1165,7 @@ namespace CsharpPart1Exercises
 
 
 
-        //method for print space and start //
-        static void PrintSpaceStart(int N, int i)
-        {
-            for (int j = N - i; j >= 1; j--) // to print space
-            {
-                Console.Write(" ");
-            }
 
-            for (int r = 1; r <= (i * 2 - 1); r++) // to print start "*"
-            {
-                Console.Write("*");
-            }
-
-            Console.WriteLine(); // go to next line 'row' .....
-        }
         //1. Simple Calculator method ...
         static void SimpleCalculator()
         {
@@ -1577,5 +1526,36 @@ namespace CsharpPart1Exercises
 
         }
 
+
+
+
+
+
+        //method for print space and start //
+        static void PrintSpaceStart(int N, int i)
+        {
+            for (int j = N - i; j >= 1; j--) // to print space
+            {
+                Console.Write(" ");
+            }
+
+            for (int r = 1; r <= (i * 2 - 1); r++) // to print start "*"
+            {
+                Console.Write("*");
+            }
+
+            Console.WriteLine(); // go to next line 'row' .....
+        }
+        //method for insert elements value to array ...
+        static void InsertArrayElement(int N, int[] array_x)
+        {
+            Console.WriteLine("Enter the element:");
+
+            for (int i = 0; i < N; i++)
+            {
+                array_x[i] = int.Parse(Console.ReadLine());
+
+            }
+        }
     }
 }
